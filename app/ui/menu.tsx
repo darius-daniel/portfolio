@@ -1,14 +1,18 @@
+import Footer from "./footer";
+
 export default function Menu() {
   const menuItems = ["_hello", "_about-me", "_projects", "_contact-me"];
 
   return (
-    <ul className="flex flex-col divide-y divide-ash">
-      {menuItems.map((item, idx) => (
-        <li key={idx} className="p-4 hover:bg-ash">
-          {item}
-        </li>
-      ))}
-      <li></li>
-    </ul>
+    <div className="flex flex-col border-t border-ash">
+      <ul>
+        {menuItems.map((item, idx) => (
+          <li key={idx} className="p-4 hover:bg-ash border-b border-ash">
+            {item}
+          </li>
+        ))}
+      </ul>
+      <Footer />
+    </div>
   );
 }
