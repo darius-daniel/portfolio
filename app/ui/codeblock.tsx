@@ -1,23 +1,35 @@
-import { codeToTokens } from "shiki";
-import { firaCode } from "../lib/fonts";
+"use client";
 
-export default async function CodeBlock({
+import {
+  BundledLanguage,
+  codeToTokens,
+  SpecialLanguage,
+  ThemedToken,
+} from "shiki";
+import { firaCode } from "../lib/fonts";
+import { useEffect, useState } from "react";
+
+export default function CodeBlock({
   code,
   lang,
 }: {
   code: string;
-  lang: string;
+  lang: BundledLanguage | SpecialLanguage | undefined;
 }) {
-  const { tokens } = await codeToTokens(code, {
-    lang: lang,
-    theme: "min-dark",
-  });
+  const [tokens, setTokens] = useState<ThemedToken[][]>([]);
+
+  useEffect(() => {
+    codeToTokens(code, {
+      lang: lang,
+      theme: "min-dark",
+    }).then(({ tokens }) => setTokens(tokens));
+  }, [code, lang]);
 
   return (
     <pre
-      className={`${firaCode.className} bg-[#011221] p-4 leading-relaxed text-[12px] rounded-2xl font-[500] border border-ash`}
+      className={`${firaCode.className} bg-primary-3 p-4 leading-relaxed text-[12px] rounded-2xl font-[500] border border-ash overflow-x-scroll`}
     >
-      {tokens.map((line, idx) => (
+      {tokens?.map((line, idx) => (
         <span key={idx}>
           <code key={idx}>
             {line.map((token, idx) => (

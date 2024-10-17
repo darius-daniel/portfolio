@@ -1,18 +1,29 @@
-import Footer from "./footer";
+import Link from "next/link";
+import { Dispatch, SetStateAction } from "react";
 
-export default function Menu() {
+export interface MenuProps {
+  showMenu: {
+    value: boolean;
+    setValue: Dispatch<SetStateAction<boolean>>;
+  };
+  pathname: string;
+}
+
+export default function Menu({ showMenu }: MenuProps) {
   const menuItems = ["_hello", "_about-me", "_projects", "_contact-me"];
 
   return (
-    <div className="flex flex-col border-t border-ash">
-      <ul>
-        {menuItems.map((item, idx) => (
-          <li key={idx} className="p-4 hover:bg-ash border-b border-ash">
-            {item}
-          </li>
-        ))}
-      </ul>
-      <Footer />
+    <div className="flex flex-col flex-auto lg:hidden">
+      {menuItems.map((item, idx) => (
+        <Link
+          key={idx}
+          className="p-4 hover:bg-ash border-b border-ash"
+          href={`/${item.split("_")[1].split("-")[0]}`}
+          onClick={() => showMenu.setValue(false)}
+        >
+          {item}
+        </Link>
+      ))}
     </div>
   );
 }

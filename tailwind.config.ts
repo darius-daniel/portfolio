@@ -26,6 +26,7 @@ const config: Config = {
           2: "#43D9AD",
           3: "#E99287",
           4: "#C98BDF",
+          5: "#3A49A4",
         },
         ash: "#1E2D3D",
       },

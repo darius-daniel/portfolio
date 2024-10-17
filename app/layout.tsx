@@ -1,17 +1,12 @@
 "use client";
 
-// import type { Metadata } from "next";
 import "./globals.css";
 import { firaCode } from "./lib/fonts";
 import Footer from "./ui/footer";
 import Header from "./ui/header";
 import { useState } from "react";
 import Menu from "./ui/menu";
-
-// export const metadata: Metadata = {
-//   title: "Darius Daniel—Web Developer",
-//   description: "Fullstack Developer Portfolio",
-// };
+import { usePathname } from "next/navigation";
 
 export default function RootLayout({
   children,
@@ -19,14 +14,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [showMenu, setShowMenu] = useState(false);
+  const pathname = usePathname();
 
   return (
     <html lang="en">
       <body
-        className={`${firaCode.className} subpixel-antialiased bg-primary-2 text-white max-h-screen border border-ash`}
+        className={`${firaCode.className} flex flex-col subpixel-antialiased bg-primary-2 text-white h-dvh max-w-h-svh border-0.5 border-ash relative`}
       >
-        <Header showMenu={{ value: showMenu, setValue: setShowMenu }} />
-        {showMenu ? <Menu /> : children}
+        <Header
+          showMenu={{ value: showMenu, setValue: setShowMenu }}
+          pathname={pathname}
+        />
+        {showMenu ? (
+          <Menu
+            showMenu={{ value: showMenu, setValue: setShowMenu }}
+            pathname={pathname}
+          />
+        ) : (
+          children
+        )}
         <Footer />
       </body>
     </html>

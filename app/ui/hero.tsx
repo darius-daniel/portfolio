@@ -27,7 +27,7 @@ export default function Hero() {
   }`;
 
   return (
-    <main className="lg:flex lg:flex-row lg:justify-center min-h-full">
+    <main className="flex-auto lg:flex lg:flex-row lg:justify-center">
       <span className="lg:hidden">
         <Blur />
       </span>
