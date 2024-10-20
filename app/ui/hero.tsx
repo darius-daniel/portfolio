@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import Blur from "./blur";
 import CodeBlock from "./codeblock";
-import { firaCode } from "../lib/fonts";
+import { fira_code } from "../lib/fonts";
 
 export default function Hero() {
   const snippet1 = `const copyToClipboard = () => {
@@ -49,7 +49,7 @@ export default function Hero() {
         <p className="text-secondary-1 mb-4 text-[14px]">
           {"// Find my profile on Github:"}
         </p>
-        <code className={`text-[14px] ${firaCode.className}`}>
+        <code className={`text-[14px] ${fira_code.className}`}>
           {" "}
           <span className="text-secondary-3">const</span>{" "}
           <span className="text-accent-2">githubLink</span> ={" "}
@@ -62,9 +62,8 @@ export default function Hero() {
         <Blur />
       </span>
       <div className="hidden lg:visible lg:flex flex-col gap-6 py-8">
-        <CodeBlock code={snippet1} lang="js" />
-        <CodeBlock code={snippet2} lang="ts" />
-        {/* <CodeBlock code={codeSnippet} lang="js" /> */}
+        <CodeBlock code={snippet1} language="typescript" />
+        <CodeBlock code={snippet2} language="typescript" />
       </div>
     </main>
   );

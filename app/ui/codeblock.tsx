@@ -1,50 +1,26 @@
-"use client";
-
-import {
-  BundledLanguage,
-  codeToTokens,
-  SpecialLanguage,
-  ThemedToken,
-} from "shiki";
-import { firaCode } from "../lib/fonts";
-import { useEffect, useState } from "react";
+import { fira_code } from "../lib/fonts";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export default function CodeBlock({
   code,
-  lang,
+  language,
 }: {
   code: string;
-  lang: BundledLanguage | SpecialLanguage | undefined;
+  language: string;
 }) {
-  const [tokens, setTokens] = useState<ThemedToken[][]>([]);
-
-  useEffect(() => {
-    codeToTokens(code, {
-      lang: lang,
-      theme: "min-dark",
-    }).then(({ tokens }) => setTokens(tokens));
-  }, [code, lang]);
-
   return (
-    <pre
-      className={`${firaCode.className} bg-primary-3 p-4 leading-relaxed text-[12px] rounded-2xl font-[500] border border-ash overflow-x-scroll`}
+    <SyntaxHighlighter
+      className={`${fira_code.className} leading-relaxed text-[12px] rounded-2xl font-[450] overflow-x-hidden`}
+      language={language}
+      style={atomOneDarkReasonable}
+      customStyle={{
+        border: "1px solid #1E2D3D",
+        background: "#011221",
+        padding: "20px",
+      }}
     >
-      {tokens?.map((line, idx) => (
-        <span key={idx}>
-          <code key={idx}>
-            {line.map((token, idx) => (
-              <span
-                style={{ color: token.color }}
-                key={idx}
-                className={`${firaCode.className}`}
-              >
-                {token.content}
-              </span>
-            ))}{" "}
-          </code>
-          <br />
-        </span>
-      ))}
-    </pre>
+      {code}
+    </SyntaxHighlighter>
   );
 }

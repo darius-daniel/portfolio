@@ -1,7 +1,7 @@
 "use client";
 
 import "./globals.css";
-import { firaCode } from "./lib/fonts";
+import { fira_code } from "./lib/fonts";
 import Footer from "./ui/footer";
 import Header from "./ui/header";
 import { useState } from "react";
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${firaCode.className} flex flex-col subpixel-antialiased bg-primary-2 text-white h-dvh max-w-h-svh border-0.5 border-ash relative`}
+        className={`${fira_code.className} flex flex-col subpixel-antialiased bg-primary-2 text-white h-svh max-w-h-svh border-0.5 border-ash relative`}
       >
         <Header
           showMenu={{ value: showMenu, setValue: setShowMenu }}

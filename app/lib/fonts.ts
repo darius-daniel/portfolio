@@ -1,3 +1,6 @@
-import { Fira_Code } from "next/font/google";
+import localFont from "next/font/local";
 
-export const firaCode = Fira_Code({ subsets: ["latin"], display: "swap" });
+export const fira_code = localFont({
+  src: "../fonts/FiraCode-VariableFont_wght.ttf",
+  display: "swap",
+});

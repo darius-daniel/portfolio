@@ -7,6 +7,9 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      mono: ["ui-monospace", "Fira Code"],
+    },
     extend: {
       colors: {
         background: "var(--background)",
