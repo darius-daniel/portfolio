@@ -36,7 +36,7 @@ export default function Header({ showMenu, pathname }: HeaderProps) {
         <span>
           <Link
             className={`p-4 border-e border-e-ash hover:text-white ${pathname === "/" && "border-b-2 border-b-accent-1"}`}
-            href="/hello"
+            href="/"
           >
             _hello
           </Link>
