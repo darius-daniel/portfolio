@@ -144,12 +144,11 @@ export default function AboutMe() {
         </p>
         {currentCategoryItem && (
           <div className="lg:flex lg:flex-row lg:divide-x lg:divide-ash lg:flex-grow">
-            <div className="hidden lg:flex lg:flex-col lg:w-1/2 gap-4 mx-auto font-medium text-secondary-1 mt-6 pb-12">
+            <div className="hidden lg:flex lg:flex-col lg:w-1/2 gap-4 mx-auto leading-normal font-medium text-secondary-1 mt-6 pb-12">
               <SyntaxHighlighter
                 language="plaintext"
                 style={atomOneDarkReasonable}
                 customStyle={{
-                  fontSize: "12px",
                   background: "#011627",
                   color: "#607B96",
                 }}

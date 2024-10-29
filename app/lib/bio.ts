@@ -1,9 +1,19 @@
 const bio = `/** Bio
-Hello there, my name is Darius Daniel. I am a front-end developer.
-I use React.js to create modern, elegant, and performant websites
-to suit my clients' needs. What I lack in experience, I make up for
-with drive and an eagerness to learn.
-
+* Hi, I'm Darius, an aspiring software developer.
+* I have always been passionate about technology,
+* but my passion for programming came to life with
+* a C programming course I took in uni. This is why,
+* when Covid hit and the world was on lockdown, I spent
+* the time learning programming. Since then, I have
+* completed many programming courses including a
+* year-long software engineering bootcamp with ALX which
+* provided me with hands-on experience in both front-end
+* and back-end development.
+*
+* I'm a motivated and hardworking individual with a strong
+* foundation in front-end development concepts seeking an
+* entry-level position to apply my skills and continue to
+* grow as a developer.
 */
 `;
 export default bio;
