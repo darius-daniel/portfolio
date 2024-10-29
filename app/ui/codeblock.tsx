@@ -2,13 +2,12 @@ import { fira_code } from "../lib/fonts";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-export default function CodeBlock({
-  code,
-  language,
-}: {
+interface Props {
   code: string;
   language: string;
-}) {
+}
+
+export default function CodeBlock({ code, language }: Props) {
   return (
     <SyntaxHighlighter
       className={`${fira_code.className} leading-relaxed text-[12px] rounded-2xl font-[450] overflow-x-hidden`}

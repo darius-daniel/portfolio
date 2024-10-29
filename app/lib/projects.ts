@@ -2,7 +2,7 @@ const projects = [
   {
     preview: "/previews/portfolio-preview.png",
     repo: "https://github.com/darius-daniel/portfolio",
-    description: "That's what you're currently viewing",
+    description: "What you're currently viewing",
     name: "_portfolio",
   },
   {

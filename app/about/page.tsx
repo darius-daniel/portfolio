@@ -9,17 +9,17 @@ import {
 
 import { useState } from "react";
 import { snippet2 } from "../lib/snippets";
-import SnippetCard from "../ui/snippet-card";
 import Bio from "../ui/bio";
+import Certification from "../ui/certification";
+import ContactInfo from "../ui/contact-info";
 import Education from "../ui/education";
 import Experience from "../ui/experience";
-import Skills from "../ui/skills";
-import Certification from "../ui/certification";
+import Hobbies from "../ui/hobbies";
 import Interests from "../ui/interests";
 import PersonalInfo from "../ui/personal-info";
 import ProfessionalInfo from "../ui/professional-info";
-import ContactInfo from "../ui/contact-info";
-import Hobbies from "../ui/hobbies";
+import Skills from "../ui/skills";
+import SnippetCard from "../ui/snippet-card";
 
 export default function AboutMe() {
   const [currentSection, setCurrentSection] = useState<

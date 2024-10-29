@@ -1,22 +1,13 @@
 "use client";
 
-import {
-  RiArrowUpSFill,
-  RiArrowRightSFill,
-  RiCloseFill,
-  RiExternalLinkFill,
-  RiMailFill,
-  RiPhoneFill,
-} from "@remixicon/react";
-import Link from "next/link";
+import { RiCloseFill } from "@remixicon/react";
 import { SetStateAction, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import ContactInfo from "../ui/contact-info";
+import ExternalLinks from "../ui/external-links";
 
 export default function ContactMe() {
-  const [showContactDropdown, setShowContactDropdown] = useState(false);
-  const [showSocialsDropdown, setShowSocialsDropdown] = useState(false);
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -51,74 +42,8 @@ button.addEventListener('click', () => {
     <main className="flex-auto lg:flex lg:flex-row lg:divide-x lg:divide-ash text-[14px] font-[450]">
       <h2 className="lg:hidden p-6 border-b border-b-ash">_contact-me</h2>
       <ul className="lg:min-w-fit">
-        <li
-          className="px-5 py-2 border-b border-ash bg-ash lg:bg-transparent flex flex-row gap-0.5 hover:underline mb-1.5 min-w-fit"
-          onClick={() => setShowContactDropdown(!showContactDropdown)}
-        >
-          {showContactDropdown ? <RiArrowUpSFill /> : <RiArrowRightSFill />}{" "}
-          contact-info
-        </li>
-        {showContactDropdown && (
-          <div className="px-6 text-secondary-1 border-b border-ash">
-            <Link
-              href="tel:+2348144778267"
-              className="flex flex-row gap-1.5 py-2 items-center hover:text-white"
-            >
-              <RiPhoneFill size={16} />
-              +2348144778267
-            </Link>
-            <Link
-              href="mailto:dariusdaniel771@gmail.com"
-              className="flex flex-row gap-1.5 py-2 items-center hover:text-white"
-            >
-              <RiMailFill size={16} />
-              dariusdaniel771@gmail.com
-            </Link>
-          </div>
-        )}
-        <li
-          className="px-5 py-2 border-b border-ash bg-ash lg:bg-transparent flex flex-row gap-0.5 hover:underline"
-          onClick={() => setShowSocialsDropdown(!showSocialsDropdown)}
-        >
-          {showSocialsDropdown ? <RiArrowUpSFill /> : <RiArrowRightSFill />}{" "}
-          find-me-also-on:
-        </li>
-        {showSocialsDropdown && (
-          <div className="px-6 text-secondary-1 lg:text-[14px]">
-            <Link
-              href="https://www.instagram.com/dariusdaniel777"
-              className="flex flex-row gap-1.5 py-2 items-center hover:text-white"
-              target="_blank"
-            >
-              <RiExternalLinkFill size={16} />
-              Instagram
-            </Link>
-            <Link
-              href="https://www.linkedin.com/dariusdaniel777"
-              className="flex flex-row gap-1.5 py-2 items-center hover:text-white"
-              target="_blank"
-            >
-              <RiExternalLinkFill size={16} />
-              LinkedIn
-            </Link>
-            <Link
-              href="https://www.twitch.com/dariusdaniel777"
-              className="flex flex-row gap-1.5 py-2 items-center hover:text-white"
-              target="_blank"
-            >
-              <RiExternalLinkFill size={16} />
-              Twitch
-            </Link>
-            <Link
-              href="https://www.instagram.com/dariusdaniel777"
-              className="flex flex-row gap-1.5 py-2 items-center hover:text-white"
-              target="_blank"
-            >
-              <RiExternalLinkFill size={16} />
-              Youtube
-            </Link>
-          </div>
-        )}
+        <ContactInfo />
+        <ExternalLinks />
       </ul>
       <section className="flex-grow  lg:flex lg:flex-col">
         <p className="hidden lg:flex border-b border-ash">

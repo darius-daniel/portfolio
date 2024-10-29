@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface ProjectCardProps {
+interface Props {
   name: string;
   description: string;
   url?: string;
@@ -17,7 +17,7 @@ export default function ProjectCard({
   repo,
   preview,
   pid,
-}: ProjectCardProps) {
+}: Props) {
   return (
     <div>
       <p className="mb-2">

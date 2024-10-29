@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
 
-export interface MenuProps {
+export interface Props {
   showMenu: {
     value: boolean;
     setValue: Dispatch<SetStateAction<boolean>>;
@@ -9,7 +9,7 @@ export interface MenuProps {
   pathname: string;
 }
 
-export default function Menu({ showMenu }: MenuProps) {
+export default function Menu({ showMenu }: Props) {
   const menuItems = ["_hello", "_about-me", "_projects", "_contact-me"];
 
   return (

@@ -1,6 +1,10 @@
 import { Entry } from "../lib/interfaces";
 
-export default function EducationEntry({ entry }: { entry: Entry }) {
+interface Props {
+  entry: Entry;
+}
+
+export default function EducationEntry({ entry }: Props) {
   return (
     <>
       <div className="text-secondary-1 hover:ms-4 hover:transition-all hover:rounded-xl">

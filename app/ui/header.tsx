@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 import { RiCloseFill, RiMenuLine } from "@remixicon/react";
 
-export interface HeaderProps {
+export interface Props {
   showMenu: {
     value: boolean;
     setValue: Dispatch<SetStateAction<boolean>>;
@@ -10,7 +10,7 @@ export interface HeaderProps {
   pathname: string;
 }
 
-export default function Header({ showMenu, pathname }: HeaderProps) {
+export default function Header({ showMenu, pathname }: Props) {
   const handleClick = () => showMenu.setValue(!showMenu.value);
 
   return (
