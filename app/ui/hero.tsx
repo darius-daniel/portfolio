@@ -1,31 +1,10 @@
-import { ChevronRight } from "lucide-react";
 import Blur from "./blur";
 import CodeBlock from "./codeblock";
+import { RiArrowRightSLine } from "@remixicon/react";
 import { fira_code } from "../lib/fonts";
+import { snippet1, snippet2 } from "../lib/snippets";
 
 export default function Hero() {
-  const snippet1 = `const copyToClipboard = () => {
-  navigator.clipboard
-    .writeText(text)
-    .then(() => {
-      setComponent(tick);
-      setTimeout(() => {
-        setComponent(copy);
-      }, 2000);
-    })
-    .catch((error: Error) => console.error(error.message));
-};`;
-
-  const snippet2 = `export async function getLinks(userId: string, currentPage: number) {
-    const maxLinksPerPage = 10;
-    return await prisma.link.findMany({
-      where: { creator_id: userId },
-      skip: (currentPage - 1) * maxLinksPerPage,
-      take: maxLinksPerPage,
-      orderBy: { created_at: 'desc' },
-    });
-  }`;
-
   return (
     <main className="flex-auto lg:flex lg:flex-row lg:justify-center">
       <span className="lg:hidden">
@@ -36,7 +15,7 @@ export default function Hero() {
           Hi all. I am
         </p>
         <p className="flex flex-row text-accent-2 text-[20px] items-center lg:hidden">
-          <ChevronRight /> Fullstack Developer
+          <RiArrowRightSLine /> Front-end Developer
         </p>
         <p className="max-lg:ms-6 text-[62px] font-normal leading-none max-lg:mb-28 lg:min-w-fit lg:tracking-tighter">
           Darius
@@ -44,7 +23,7 @@ export default function Hero() {
           Daniel
         </p>
         <p className="max-lg:hidden flex flex-row text-secondary-3 text-[20px] items-center mb-16 tracking-tighter">
-          <ChevronRight /> Fullstack Developer
+          <RiArrowRightSLine /> Front-end Developer
         </p>
         <p className="text-secondary-1 mb-4 text-[14px]">
           {"// Find my profile on Github:"}

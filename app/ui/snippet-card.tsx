@@ -3,26 +3,14 @@
 import Image from "next/image";
 import CodeBlock from "./codeblock";
 import { useState } from "react";
-import { X } from "lucide-react";
+import { RiCloseFill } from "@remixicon/react";
 
-export default function SnippetCard() {
-  const snippet1 = `const copyToClipboard = () => {
-  navigator.clipboard
-    .writeText(text)
-    .then(() => {
-      setComponent(tick);
-      setTimeout(() => {
-        setComponent(copy);
-      }, 2000);
-    })
-    .catch((error: Error) => console.error(error.message));
-};`;
-
+export default function SnippetCard({ codeSnippet }: { codeSnippet: string }) {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
     <>
-      <span className="flex flex-row gap-3 mb-4">
+      <div className="flex flex-row gap-3 mb-2">
         <Image
           src="/kidaha-05.svg"
           width={36}
@@ -49,19 +37,19 @@ export default function SnippetCard() {
             details
           </span>
         </span>
-      </span>
-      <CodeBlock code={snippet1} lang="ts" />
+      </div>
+      <CodeBlock code={codeSnippet} language="javascript" />
       {showDetails && (
         <>
           <hr className="my-8 border-ash" />
-          <div className="flex flex-row text-secondary-1 text-[10px] md:text-[12px] lg:text-[14px] font-[450]">
-            <p className="text-[14px] text-secondary-1 w-11/12">
+          <div className="flex flex-row text-secondary-1 text-[10px] md:text-[12px] font-[450]">
+            <p className="w-full">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi
               labore cumque rerum accusantium eum quidem similique quam,
               distinctio, praesentium possimus assumenda accusamus sequi dolore
               aliquam iusto error atque quod.
             </p>
-            <X onClick={() => setShowDetails(false)} />
+            <RiCloseFill onClick={() => setShowDetails(false)} />
           </div>
         </>
       )}

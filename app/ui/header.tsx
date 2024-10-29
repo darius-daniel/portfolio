@@ -1,6 +1,6 @@
-import { Menu, X } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
+import { RiCloseFill, RiMenuLine } from "@remixicon/react";
 
 export interface HeaderProps {
   showMenu: {
@@ -22,9 +22,12 @@ export default function Header({ showMenu, pathname }: HeaderProps) {
         darius-daniel
       </Link>
       {showMenu.value ? (
-        <X className="me-4 hover:text-white lg:hidden" onClick={handleClick} />
+        <RiCloseFill
+          className="me-4 hover:text-white lg:hidden"
+          onClick={handleClick}
+        />
       ) : (
-        <Menu
+        <RiMenuLine
           className="me-4 hover:text-white lg:hidden"
           onClick={handleClick}
         />

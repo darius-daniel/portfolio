@@ -1,4 +1,4 @@
-import { Facebook, Github, Twitter } from "lucide-react";
+import { RiFacebookFill, RiGithubFill, RiTwitterFill } from "@remixicon/react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -13,14 +13,14 @@ export default function Footer() {
           href={`https://www.twitter.com/_darius_daniel_`}
           target="_blank"
         >
-          <Twitter className="fill-secondary-1 hover:fill-white hover:text-white" />
+          <RiTwitterFill className="fill-secondary-1 hover:fill-white hover:text-white" />
         </Link>
         <Link
           className="border-e border-ash p-4"
           href={`https://www.facebook.com/darius.daniel.526`}
           target="_blank"
         >
-          <Facebook className="fill-secondary-1 hover:fill-white hover:text-white" />
+          <RiFacebookFill className="fill-secondary-1 hover:fill-white hover:text-white" />
         </Link>
         <Link
           className="group p-4 hover:text-white lg:absolute lg:right-0 lg:border-s lg:border-ash lg:flex lg:flex-row lg:gap-2"
@@ -28,7 +28,7 @@ export default function Footer() {
           target="_blank"
         >
           <span className="max-lg:hidden">darius-daniel</span>
-          <Github className="fill-secondary-1 group-hover:fill-white " />
+          <RiGithubFill className="fill-secondary-1 group-hover:fill-white" />
         </Link>
       </span>
     </footer>

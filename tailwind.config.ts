@@ -32,6 +32,7 @@ const config: Config = {
           5: "#3A49A4",
         },
         ash: "#1E2D3D",
+        custom: { 1: "#1C2B3A" },
       },
     },
   },

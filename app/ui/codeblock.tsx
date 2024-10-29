@@ -19,6 +19,7 @@ export default function CodeBlock({
         background: "#011221",
         padding: "20px",
       }}
+      wrapLongLines
     >
       {code}
     </SyntaxHighlighter>

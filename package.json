@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@expressive-code/plugin-line-numbers": "^0.37.0",
-    "lucide-react": "^0.452.0",
+    "@remixicon/react": "^4.3.0",
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18"
