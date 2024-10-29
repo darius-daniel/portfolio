@@ -21,7 +21,7 @@ export default function Projects() {
   };
 
   return (
-    <main className="flex-auto flex flex-col lg:flex-row lg:divide-x lg:divide-ash pb-10">
+    <main className="flex-auto lg:flex lg:flex-row lg:divide-x lg:divide-ash">
       <h2 className="lg:hidden p-6 border-b border-b-ash">_projects</h2>
       <div>
         <div
@@ -92,7 +92,7 @@ export default function Projects() {
           </form>
         )}
       </div>
-      <section className="px-5 flex flex-col lg:flex-row gap-2 lg:px-28 lg:items-center">
+      <section className="px-5 flex flex-col lg:flex-row gap-2 lg:px-28 lg:items-center pb-10">
         {projects.map((project, idx) => (
           <ProjectCard
             preview={project.preview}

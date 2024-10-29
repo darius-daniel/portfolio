@@ -3,7 +3,7 @@ import { Entry } from "../lib/interfaces";
 export default function EducationEntry({ entry }: { entry: Entry }) {
   return (
     <>
-      <div className="text-secondary-1 hover:ms-4 hover:rounded-xl">
+      <div className="text-secondary-1 hover:ms-4 hover:transition-all hover:rounded-xl">
         <p className="text-[16px]">{entry.programme}</p>
         <p className="text-secondary-3 text-[12px] font-bold">
           {entry.institution}
