@@ -1,4 +1,5 @@
-export const snippet1 = `const copyToClipboard = () => {
+export const snippet1 = {
+  code: `const copyToClipboard = () => {
 navigator.clipboard
   .writeText(text)
   .then(() => {
@@ -8,9 +9,12 @@ navigator.clipboard
     }, 2000);
   })
   .catch((error: Error) => console.error(error.message));
-};`;
+};`,
+  comment: "",
+};
 
-export const snippet2 = `export async function getLinks(userId: string, currentPage: number) {
+export const snippet2 = {
+  code: `export async function getLinks(userId: string, currentPage: number) {
   const maxLinksPerPage = 10;
   return await prisma.link.findMany({
     where: { creator_id: userId },
@@ -18,4 +22,6 @@ export const snippet2 = `export async function getLinks(userId: string, currentP
     take: maxLinksPerPage,
     orderBy: { created_at: 'desc' },
   });
-}`;
+}`,
+  comment: "",
+};

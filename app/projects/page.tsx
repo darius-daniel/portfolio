@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   RiArrowDownSFill,
@@ -8,10 +8,10 @@ import {
   RiHtml5Fill,
   RiJavascriptFill,
   RiReactjsFill,
-} from "@remixicon/react";
-import ProjectCard from "../ui/project-card";
-import { ChangeEvent, useState } from "react";
-import projects from "../lib/projects";
+} from '@remixicon/react';
+import ProjectCard from '../ui/project-card';
+import { ChangeEvent, useState } from 'react';
+import projects from '../lib/projects';
 
 export default function Projects() {
   const [showProjectsFilter, setShowProjectsFilter] = useState(false);
@@ -28,7 +28,7 @@ export default function Projects() {
           className="px-5 py-2 border-b border-ash bg-ash lg:bg-transparent flex flex-row gap-0.5 hover:underline mb-1.5 min-w-fit"
           onClick={() => setShowProjectsFilter(!showProjectsFilter)}
         >
-          {showProjectsFilter ? <RiArrowDownSFill /> : <RiArrowRightSFill />}{" "}
+          {showProjectsFilter ? <RiArrowDownSFill /> : <RiArrowRightSFill />}{' '}
           _projects
         </div>
         {showProjectsFilter && (
@@ -92,7 +92,7 @@ export default function Projects() {
           </form>
         )}
       </div>
-      <section className="px-5 flex flex-col lg:flex-row gap-2 lg:px-28 lg:items-center pb-10">
+      <section className="px-5 flex flex-col lg:flex-row gap-2 lg:px-28 lg:items-stretch pb-10">
         {projects.map((project, idx) => (
           <ProjectCard
             preview={project.preview}

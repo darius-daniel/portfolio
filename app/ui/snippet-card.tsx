@@ -5,8 +5,15 @@ import CodeBlock from "./codeblock";
 import { useState } from "react";
 import { RiCloseFill } from "@remixicon/react";
 
-export default function SnippetCard({ codeSnippet }: { codeSnippet: string }) {
-  const [showDetails, setShowDetails] = useState(false);
+interface Props {
+  codeSnippet: {
+    code: string,
+    comment: string
+  }
+}
+
+export default function SnippetCard({ codeSnippet }: Props) {
+  const [showComment, setShowComment] = useState(false);
 
   return (
     <>
@@ -25,7 +32,7 @@ export default function SnippetCard({ codeSnippet }: { codeSnippet: string }) {
           </span>
           <span
             className="flex flex-row gap-2 hover:underline group"
-            onClick={() => setShowDetails(!showDetails)}
+            onClick={() => setShowComment(!showComment)}
           >
             <Image
               src="/comments.svg"
@@ -38,18 +45,15 @@ export default function SnippetCard({ codeSnippet }: { codeSnippet: string }) {
           </span>
         </span>
       </div>
-      <CodeBlock code={codeSnippet} language="javascript" />
-      {showDetails && (
+      <CodeBlock code={codeSnippet.code} language="javascript" />
+      {showComment && (
         <>
           <hr className="my-8 border-ash" />
           <div className="flex flex-row text-secondary-1 text-[10px] md:text-[12px] font-[450]">
             <p className="w-full">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi
-              labore cumque rerum accusantium eum quidem similique quam,
-              distinctio, praesentium possimus assumenda accusamus sequi dolore
-              aliquam iusto error atque quod.
+              {codeSnippet.comment}
             </p>
-            <RiCloseFill onClick={() => setShowDetails(false)} />
+            <RiCloseFill onClick={() => setShowComment(false)} />
           </div>
         </>
       )}

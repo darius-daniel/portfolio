@@ -14,7 +14,7 @@ interface Props {
 
 export default function PersonalInfo({ topic }: Props) {
   const [showDropdown, setShowDropdown] = useState(false);
-  const topics = ["bio", "interests", "education"];
+  const topics = ["bio", "hobbies", "education"];
   const folderColors = ["#E99287", "#43D9AD", "#3A49A4"];
 
   return (

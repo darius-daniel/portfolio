@@ -18,6 +18,7 @@ export default function Header({ showMenu, pathname }: Props) {
       <Link
         className="p-4 hover:text-white lg:border-e lg:border-ash lg:min-w-fit"
         href="/"
+        prefetch={true}
       >
         darius-daniel
       </Link>
@@ -37,18 +38,21 @@ export default function Header({ showMenu, pathname }: Props) {
           <Link
             className={`p-4 border-e border-e-ash hover:text-white ${pathname === "/" && "border-b-2 border-b-accent-1"}`}
             href="/"
+            prefetch={true}
           >
             _hello
           </Link>
           <Link
             className={`p-4 border-e border-e-ash hover:text-white ${pathname === "/about" && "border-b-2 border-b-accent-1"}`}
             href="/about"
+            prefetch={true}
           >
             _about-me
           </Link>
           <Link
             className={`p-4 border-e border-e-ash hover:text-white ${pathname === "/projects" && "border-b-2 border-b-accent-1"}`}
             href="/projects"
+            prefetch={true}
           >
             _projects
           </Link>
@@ -56,6 +60,7 @@ export default function Header({ showMenu, pathname }: Props) {
         <Link
           className={`p-4 border-s border-s-ash hover:text-white ${pathname === "/contact" && "border-b-2 border-b-accent-1"}`}
           href="/contact"
+          prefetch={true}
         >
           _contact-me
         </Link>
