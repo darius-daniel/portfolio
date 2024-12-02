@@ -5,7 +5,9 @@ export const technicalSkills = [
   'React',
   'Next.js',
   'AdonisJS',
-  'Git',
+  'Version Control',
+  'Responsive Design',
+  'Tailwind CSS',
 ];
 
-export const softSkills = ['Self-motivated'];
+export const softSkills = ['Self-motivation'];
