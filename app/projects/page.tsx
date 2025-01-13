@@ -10,15 +10,15 @@ import {
   RiReactjsFill,
 } from '@remixicon/react';
 import ProjectCard from '../ui/project-card';
-import { ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 import projects from '../lib/projects';
 
 export default function Projects() {
   const [showProjectsFilter, setShowProjectsFilter] = useState(false);
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    event.preventDefault();
-  };
+  const labelStyles =
+    'flex flex-row gap-2.5 items-center -mt-0.5 hover:text-white';
+  const labelTextStyles = 'flex gap-1.5';
 
   return (
     <main className="flex-auto lg:flex lg:flex-row lg:divide-x lg:divide-ash">
@@ -33,66 +33,50 @@ export default function Projects() {
         </div>
         {showProjectsFilter && (
           <form className="px-6 text-secondary-1 border-b border-ash flex flex-col gap-3 items-start pt-2 pb-4">
-            <span className="flex flex-row gap-2.5 hover:text-white">
+            <label htmlFor="react" className={labelStyles}>
               <input type="checkbox" value="React" name="react" id="react" />
-              <label
-                htmlFor="react"
-                className="flex flex-row gap-1.5 items-center"
-              >
+              <span className={labelTextStyles}>
                 <RiReactjsFill size={20} />
                 React
-              </label>
-            </span>
-            <span className="flex flex-row gap-2.5 hover:text-white">
+              </span>
+            </label>
+            <label htmlFor="html" className={labelStyles}>
               <input type="checkbox" value="html" name="html" id="html" />
-              <label
-                htmlFor="html"
-                className="flex flex-row gap-1.5 items-center"
-              >
+              <span className={labelTextStyles}>
                 <RiHtml5Fill size={20} />
                 HTML
-              </label>
-            </span>
-            <span className="flex flex-row gap-2.5 hover:text-white">
+              </span>
+            </label>
+            <label htmlFor="css" className={labelStyles}>
               <input type="checkbox" value="css" name="css" id="css" />
-              <label
-                htmlFor="css"
-                className="flex flex-row gap-1.5 items-center"
-              >
+              <span className={labelTextStyles}>
                 <RiCss3Fill size={20} />
                 CSS
-              </label>
-            </span>
-            <span className="flex flex-row gap-2.5 hover:text-white">
+              </span>
+            </label>
+            <label htmlFor="js" className={labelStyles}>
               <input type="checkbox" value="js" name="js" id="js" />
-              <label
-                htmlFor="js"
-                className="flex flex-row gap-1.5 items-center"
-              >
+              <span className={labelTextStyles}>
                 <RiJavascriptFill size={20} />
                 JavaScript
-              </label>
-            </span>
-            <span className="flex flex-row gap-2.5 hover:text-white">
+              </span>
+            </label>
+            <label htmlFor="angular" className={labelStyles}>
               <input
                 type="checkbox"
                 value="angular"
                 name="angular"
                 id="angular"
-                onChange={handleChange}
               />
-              <label
-                htmlFor="angular"
-                className="flex flex-row gap-1.5 items-center"
-              >
+              <span className={labelTextStyles}>
                 <RiAngularjsFill size={20} />
                 Angular
-              </label>
-            </span>
+              </span>
+            </label>
           </form>
         )}
       </div>
-      <section className="px-5 flex flex-col lg:flex-row gap-2 lg:px-28 lg:items-stretch pb-10">
+      <section className="px-5 flex flex-col items-center lg:flex-row lg:flex-wrap gap-2 lg:px-28 lg:items-stretch py-10">
         {projects.map((project, idx) => (
           <ProjectCard
             preview={project.preview}

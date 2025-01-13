@@ -3,8 +3,8 @@ import { softSkills, technicalSkills } from '../lib/skills';
 import Container from './container';
 
 export default function Skills() {
-  const headingStyle = 'font-bold ps-2.5 mb-2 text-accent-2';
-  const bodyStyle = 'flex flex-row flex-wrap gap-2';
+  const headingStyle = 'font-bold mb-2 text-accent-2';
+  const bodyStyle = 'flex flex-row flex-wrap gap-4';
 
   return (
     <Container section="professional-info" topic="skills">
