@@ -1,4 +1,3 @@
-import { clearPreviewData } from 'next/dist/server/api-utils';
 import Link from 'next/link';
 
 interface Props {
