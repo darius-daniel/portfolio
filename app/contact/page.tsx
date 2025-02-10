@@ -103,7 +103,7 @@ button.addEventListener('click', () => {
             <SendMessage />
             {state.message
               ? <p className='bg-accent-5'>Sent message successfully</p>
-              : <p className='bg-accent-5'>Couldn't send message. Please try again</p>}
+              : <p className='bg-accent-5'>Could not send message. Please try again</p>}
           </form>
           <div className="hidden lg:block lg:w-1/2 lg:pt-10">
             <SyntaxHighlighter
