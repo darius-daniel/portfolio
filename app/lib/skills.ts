@@ -10,4 +10,12 @@ export const technicalSkills = [
   'Tailwind CSS',
 ];
 
-export const softSkills = ['Self-motivation'];
+export const softSkills = [
+  'Resourceful',
+  'Enthusiastic',
+  'Ambitious',
+  'Fast learner',
+  'Passionate',
+  'Professionalism',
+  'Good communicator',
+];
