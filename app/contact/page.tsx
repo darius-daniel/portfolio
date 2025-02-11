@@ -14,10 +14,13 @@ export default function ContactMe() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  console.log(name, email, message);
+
   const initialState = {
-    message: false,
+    message: '',
   };
-  const [state, formAction] = useActionState(sendMail, initialState);
+  const [state, formAction, pending] = useActionState(sendMail, initialState);
+  
 
   const handleChange = (event: {
     target: { id: string; value: SetStateAction<string> };
@@ -107,13 +110,6 @@ button.addEventListener('click', () => {
               )}
             </span>
             <SendMessage />
-            {state.message ? (
-              <p className="text-accent-3">Sent message successfully</p>
-            ) : (
-              <p className="text-accent-3">
-                Could not send message. Please try again
-              </p>
-            )}
           </form>
           <div className="hidden lg:block lg:w-1/2 lg:pt-10">
             <SyntaxHighlighter

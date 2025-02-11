@@ -60,9 +60,9 @@ export async function sendMail(prevState: State, formData: FormData) {
       templateVariables: { name, message, email },
       category: "Integration Test",
     })
-    return { message: response.success }
+    return { message: 'success' }
   } catch (error) {
     console.error(error);
-    return { message: false }
+    return { message: 'Could not send message. Please try again.' }
   }
 }
