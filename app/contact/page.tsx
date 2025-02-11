@@ -17,9 +17,9 @@ export default function ContactMe() {
   console.log(name, email, message);
 
   const initialState = {
-    message: '',
+    message: false,
   };
-  const [state, formAction, pending] = useActionState(sendMail, initialState);
+  const [state, formAction] = useActionState(sendMail, initialState);
   
 
   const handleChange = (event: {
