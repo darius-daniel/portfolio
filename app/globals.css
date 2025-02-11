@@ -13,8 +13,6 @@
 }
 
 body {
-    color: var(--foreground);
-    background: var(--background);
     font-family: "Fira Code", monospace;
 }
 
@@ -22,6 +20,28 @@ body {
     .text-balance {
         text-wrap: balance;
     }
+}
+
+@theme {
+    --color-primary-1: #10180e;
+    --color-primary-2: #011627;
+    --color-primary-3: #011221;
+
+    --color-secondary-1: #607b96;
+    --color-secondary-2: #3c9d93;
+    --color-secondary-3: #4d5bce;
+
+    --color-accent-1: #fea55f;
+    --color-accent-2: #43d9ad;
+    --color-accent-3: #e99287;
+    --color-accent-4: #c98bdf;
+    --color-accent-5: #3a49a4;
+
+    --color-ash: #1e2d3d;
+    --color-custom-1: #1c2b3a;
+
+    /*--color-background: var(--background);
+    --color-foreground: var(--foreground); */
 }
 
 input[type="checkbox"] {
