@@ -2,12 +2,15 @@ export const technicalSkills = [
   'HTML',
   'CSS',
   'JavaScript',
+  'TypeScript',
   'React',
   'Next.js',
-  'AdonisJS',
-  'Version Control',
+  'Git',
   'Responsive Design',
   'Tailwind CSS',
+  'Python',
+  'Flask',
+  'CSS Methodologies (BEM, SMACSS)',
 ];
 
 export const softSkills = [
