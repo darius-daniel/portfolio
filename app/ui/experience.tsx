@@ -1,9 +1,11 @@
+import experience from '../lib/experience';
 import Container from './container';
+import ExperienceEntry from './experience-entry';
 
 export default function Experience() {
   return (
     <Container section="professional-info" topic="experience">
-      <p className="lg:w-5/6 mx-auto">Coming soon...</p>
+      {experience.map((entry, idx) => <ExperienceEntry key={idx} entry={entry} />)}
     </Container>
   );
 }

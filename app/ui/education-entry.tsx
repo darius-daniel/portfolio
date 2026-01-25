@@ -1,7 +1,7 @@
-import { Entry } from "../lib/interfaces";
+import { EducationEntryInterface } from "../lib/interfaces";
 
 interface Props {
-  entry: Entry;
+  entry: EducationEntryInterface;
 }
 
 export default function EducationEntry({ entry }: Props) {
