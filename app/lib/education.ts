@@ -1,6 +1,6 @@
-import { Entry } from "./interfaces";
+import { EducationEntryInterface } from "./interfaces";
 
-const education: Array<Entry> = [
+const education: Array<EducationEntryInterface> = [
   {
     institution: "Federal Government College, Kaduna",
     programme: "SSCE/WAEC",
