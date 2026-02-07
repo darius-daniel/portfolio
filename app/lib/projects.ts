@@ -14,12 +14,20 @@ const projects = [
     name: '_linkly',
   },
   {
-    preview: 'https://www.tbtacademy.com.ng',
-    repo: 'https://www.tbtacademy.com',
+    preview: 'https://www.hisdigitalsystems.com',
+    repo: '',
     description:
-      'Page with info and registration for a forex trading bootcamp.',
-    name: '_tbt-academy',
-    techStack: ['react', 'html', 'css'],
+      'Company website for HIS Digital Systems',
+    name: '_his_digital_systems',
+    techStack: ['react', 'html', 'css', 'tailwindcss', 'next.js', 'typescript', 'tsx'],
+  },
+  {
+    preview: 'https://www.paypronto.io',
+    repo: '',
+    description:
+      'Built the landing the page for a payment processing company, which doubles as a waitlist, along with the auth pages, and the UI for the retail dashboard',
+    name: '_pay_pronto',
+    techStack: ['react', 'html', 'css', 'tailwindcss', 'next.js', 'typescript', 'tsx'],
   },
   {
     preview: 'https://fem-space-tour.netlify.app/',
